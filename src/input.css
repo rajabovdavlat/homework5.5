@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@utility container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@theme {
+  --color-gray-600: #5d6c7b;
+  --color-primary-black: #282739;
+  --color-blue-bg: #6f73ee;
+  --color-gray-bg: #f4f7fb;
+}
+
+.backgroundImage {
+    background-image: url('img/herobg.png');
+    background-size: cover;
+    background-position: center;
+}

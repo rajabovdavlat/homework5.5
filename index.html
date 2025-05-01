@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="container flex flex-col">
+      <div class="flex justify-between w-full px-[165px]">
+        <div class="flex items-center justify-center gap-[30px]">
+          <ul class="flex gap-[30px] text-gray-600 text-[12px]/[100%]">
+            <li><a href="#">Сервис</a></li>
+            <li><a href="#">Сотрудничество</a></li>
+            <li><a href="#">Заказать звонок</a></li>
+          </ul>
+          <div class="">
+            <ul class="flex gap-2">
+              <li>
+                <a href="#"><img src="img/viber.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/whatsapp.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/telegram.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <h4 class="text-primary-black">+7 (800) 505-54-61</h4>
+        </div>
+      </div>
+      <div class="flex justify-between mt-[41px] px-[165px]">
+        <div class="flex gap-5 items-center justify-center">
+          <div class="flex gap-[35px] items-center justify-center">
+            <a href="#"
+              ><h1 class="text-primary-black font-bold text-3xl/[100%]">
+                KUGOO
+              </h1></a
+            >
+            <button
+              class="cursor-pointer text-white px-5 py-2 bg-blue-bg rounded-md"
+            >
+              Каталог
+            </button>
+          </div>
+          <div class="flex w-[603px] items-center justify-center">
+            <select
+              class="bg-gray-bg py-2.5 pl-3.5 rounded-md text-sm text-primary-black"
+            >
+              <option value="Везде">Везде</option>
+              <option value="Горный">Горный</option>
+              <option value="Дорожный">Дорожный</option>
+              <option value="Спортивный">Спортивный</option>
+            </select>
+            <input
+              type="search"
+              class="outline-0 w-full"
+              placeholder="Искать самокат KUGO"
+            />
+            <button
+              class="cursor-pointer bg-blue-bg p-3 rounded-br-md rounded-tr-md"
+            >
+              <img src="img/Search.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <ul class="flex gap-[25px]">
+            <li>
+              <a href="#"><img src="img/balance.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/Heart.svg" alt="" /></a>
+            </li>
+            <li class="relative">
+              <span id="countView" class=" absolute -top-1 left-3.5 p-1.5 rounded-full bg-red-500 text-white font-bold text-[10px]/[100%] text-center"></span>
+              <a href="#"><img src="img/basket.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-[#F4F7FB] w-full px-[165px] py-2.5 mt-[35px]">
+        <ul
+          class="flex gap-[50px] text-primary-black text-sm/[100%] items-center justify-start"
+        >
+          <li><a href="#">О магазине</a></li>
+          <li>
+            <a href="#" class="text-center"
+              >Доставка и оплата
+              <span class="bg-blue-bg text-white pb-0.5 rounded-full px-2"
+                >Доступна рассрочка</span
+              ></a
+            >
+          </li>
+          <li><a href="#">Тест-драйв</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li>
+            <a href="#"
+              >Акции
+              <span
+                class="bg-blue-bg text-white pr-1.5 pl-[5px] py-[3px] rounded-full text-[10px]"
+                >%</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section
+      class="mt-[31px] container w-full pl-[135px] py-10 bg-[url('/img/herobg.png')] bg-cover bg-center"
+    >
+      <div class="flex flex-col justify-between items-start w-full gap-9">
+        <h4
+          class="border border-white px-2.5 py-1 text-white text-sm/[100%] rounded-md"
+        >
+          Новинка
+        </h4>
+        <div class="flex flex-col items-start gap-2 max-w-[615px]">
+          <h2 class="text-white font-semibold text-4xl uppercase">
+            Электросамокаты Kugoo Kirin от официального дилера
+          </h2>
+          <p class="text-white text-xl">
+            с бесплатной доставкой по РФ от 1 дня
+          </p>
+          <button class="cursor-pointer bg-white text-blue-bg px-6 py-4 mt-4">
+            Перейти в католог
+          </button>
+        </div>
+        <img class="mt-[10px]" src="img/progress_bar.png" alt="" />
+      </div>
+    </section>
+    <section
+      class="container flex flex-col items-center justify-beetwen mt-[81px] mb-[57px] px-[165px]"
+    >
+      <div class="flex justify-between items-center w-full">
+        <h2 class="text-primary-black text-4xl font-semibold uppercase4">
+          Электросамокаты
+        </h2>
+        <ul id="section-header" class="flex gap-2.5"></ul>
+      </div>
+      <div
+        id="cardsContainer"
+        class="grid grid-cols-4 mt-[57px] gap-x-[30px] w-full gap-y-[30px]"
+      ></div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
