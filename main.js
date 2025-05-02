@@ -122,3 +122,56 @@ cardBtn &&
   });
 
 countView.textContent = counter;
+
+const cardForm = document.getElementById("cardForm");
+
+cardForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const acumulator = document.getElementById("acumulator").value.trim();
+  const power = document.getElementById("power").value.trim();
+  const speed = document.getElementById("speed").value.trim();
+  const time = document.getElementById("time").value.trim();
+  const price = document.getElementById("price").value.trim();
+
+  const newCard = {
+    name,
+    acumulator,
+    power,
+    speed,
+    time,
+    price,
+  };
+
+  const cardHTML = `<div class="border-[1.5px] border-[#EAEBED] flex flex-col gap-5 items-start justify-center">
+    <div class="min-w-full">
+      <img class="w-full object-cover" src="img/samokat.png" alt="" />
+    </div>
+    <div class='px-6 flex flex-col items-start justify-center gap-5'>
+      <h4 class="font-semibold text-lg text-primary-black">${newCard.name}</h4>
+      <ul class='grid grid-cols-2 items-center justify-center gap-x-4 gap-y-4 w-full'>
+        <li class="text-gray-600 flex gap-1"><img src="img/accumulator.svg" alt="" /><span>${newCard.acumulator}</span></li>
+        <li class="text-gray-600 flex gap-1"><img src="img/power.svg" alt="" />${newCard.power}</li>
+        <li class="text-gray-600 flex gap-1"><img src="img/speedometer.svg" alt="" />${newCard.speed}</li>
+        <li class="text-gray-600 flex gap-1"><img src="img/timer.svg" alt="" />${newCard.time}</li>
+      </ul>
+      <div class="flex justify-between w-full mb-4">
+        <h4 class="font-semibold text-xl text-primary-black">${newCard.price}</h4>
+        <div class="cardBtn border rounded-full p-2.5 border-gray-600"><img src="img/shopping-cart.svg" alt="" /></div>
+      </div>
+    </div>
+  </div>`;
+
+  cardsContainer.insertAdjacentHTML("beforeend", cardHTML);
+
+  const allBtns = document.querySelectorAll(".cardBtn");
+  allBtns.forEach((btn) => {
+    btn.onclick = () => {
+      counter++;
+      countView.textContent = counter;
+    };
+  });
+
+  cardForm.reset();
+});

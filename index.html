@@ -78,7 +78,10 @@
               <a href="#"><img src="img/Heart.svg" alt="" /></a>
             </li>
             <li class="relative">
-              <span id="countView" class=" absolute -top-1 left-3.5 p-1.5 rounded-full bg-red-500 text-white font-bold text-[10px]/[100%] text-center"></span>
+              <span
+                id="countView"
+                class="absolute -top-1 left-3.5 p-1.5 rounded-full bg-red-500 text-white font-bold text-[10px]/[100%] text-center"
+              ></span>
               <a href="#"><img src="img/basket.svg" alt="" /></a>
             </li>
           </ul>
@@ -135,6 +138,7 @@
         <img class="mt-[10px]" src="img/progress_bar.png" alt="" />
       </div>
     </section>
+
     <section
       class="container flex flex-col items-center justify-beetwen mt-[81px] mb-[57px] px-[165px]"
     >
@@ -144,6 +148,74 @@
         </h2>
         <ul id="section-header" class="flex gap-2.5"></ul>
       </div>
+
+      <div class="max-w-4xl mx-auto my-20 px-6">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-14">
+          Создать новую карточку
+        </h2>
+        <form
+          id="cardForm"
+          class="grid grid-cols-2 md:grid-cols-2 gap-x-8 gap-y-6"
+        >
+          <input
+            type="text"
+            id="name"
+            placeholder="Название..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <input
+            type="text"
+            id="acumulator"
+            placeholder="Аккумулятор..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <input
+            type="text"
+            id="power"
+            placeholder="Мощность..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <input
+            type="text"
+            id="speed"
+            placeholder="Скорость..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <input
+            type="text"
+            id="time"
+            placeholder="Время работы..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <input
+            type="text"
+            id="price"
+            placeholder="Цена..."
+            class="w-full px-5 py-3 text-base border border-gray-300 rounded-xl placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+            required
+          />
+
+          <div class="col-span-1 md:col-span-2 flex justify-center pt-4">
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-600 text-white px-10 py-3 rounded-full font-semibold shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105"
+            >
+              ➕ Добавить карточку
+            </button>
+          </div>
+        </form>
+      </div>
+
       <div
         id="cardsContainer"
         class="grid grid-cols-4 mt-[57px] gap-x-[30px] w-full gap-y-[30px]"
